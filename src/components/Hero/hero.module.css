@@ -1,0 +1,63 @@
+.hero {
+}
+
+.role {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.hero-h1 {
+  font-size: 7rem;
+  line-height: 1;
+  letter-spacing: 12px;
+  font-weight: 800;
+}
+
+.hero-para {
+}
+
+.hero-button:hover .hero-arrow-up-icon {
+  fill: #252252;
+  transform: translateY(2px);
+}
+
+.hero-arrow-up-icon {
+  stroke-width: 1px;
+  /* transform:translateY(-1px); */
+  transition: transform 0.2s;
+}
+
+.hero-image {
+  position: absolute;
+  top: -170px;
+  right: 0;
+  width: 50%;
+  height: 140%;
+  z-index: -3;
+}
+
+.fade {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 51%;
+  height: 100%;
+  z-index: -2;
+}
+
+.bottom-fade {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(31, 36, 0, 0) 35%
+  );
+}
+
+.left-fade {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(31, 36, 0, 0) 70%
+  );
+}

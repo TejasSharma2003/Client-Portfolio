@@ -1,0 +1,11 @@
+.grid {
+  /* display: grid; */
+  /* grid-template-columns: repeat(4,1fr); */
+  /* gap:2rem; */
+}
+
+.item {
+  max-width: 250px;
+  object-fit: cover;
+  cursor: pointer;
+}

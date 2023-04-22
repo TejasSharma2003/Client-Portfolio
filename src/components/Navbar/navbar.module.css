@@ -1,0 +1,57 @@
+.navbar {
+}
+
+.menu-box {
+}
+
+.menu-text {
+  font-size: 1.4rem;
+  transition: all 0.2s;
+}
+
+.close-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.close-text-show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.menu {
+}
+
+.line {
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+.upper-line {
+  width: 100%;
+}
+
+.upper-line-active {
+  width: 80%;
+  transform: rotate(45deg);
+  position: relative;
+  margin: 0;
+  top: 2px;
+  bottom: -2px;
+}
+
+.lower-line {
+  width: 80%;
+}
+
+.lower-line-active {
+  transform: rotate(-45deg);
+  position: relative;
+}
+
+.logo {
+}

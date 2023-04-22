@@ -1,0 +1,17 @@
+.social-links
+{
+    position: fixed;
+    left:2rem;
+    bottom:4rem;
+}
+
+.social-links > a:not(:last-child)
+{
+    margin-bottom: 2rem;
+}
+
+.social-links > a:hover
+{
+    fill: #252525;
+
+}

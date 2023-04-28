@@ -2,12 +2,11 @@ import React, { useState } from 'react'
 import * as  styles from './navbar.module.css';
 
 import Button from '../../elements/Button'
-
-import logoImage from '../../images/Logo.svg'
-
 import NavLinks from './NavLinks';
 
 import { AnimatePresence } from 'framer-motion';
+
+import Logo from '../Logo';
 
 const Navbar = () => {
     const [menuActive, setMenuActive] = useState(false);
@@ -21,8 +20,8 @@ const Navbar = () => {
             <AnimatePresence>
                 {menuActive && <NavLinks menuActive={menuActive} />}
             </AnimatePresence>
-            <nav className={`${styles.navbar} sticky  z-30 top-0 left-0 flex  items-center  pt-5  `}>
-                <div className='w-5/12 '>
+            <nav className={`${styles.navbar} relative z-40 flex  items-center  pt-5  `}>
+                <div className='w-full sm:w-5/12 '>
                     <div className={`${styles.menu} flex self-center`}>
                         <div onClick={onClickMenuHandler} className={`${styles.menuBox} flex justify-center self-center cursor-pointer items-center`}>
                             <div className={`mr-4 relative`}>
@@ -38,14 +37,14 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <div className='w-5/12'>
-                    <div className={`${styles.logoBox} w-36 h-36 m-auto`}>
-                        <img className={`styles.logo max-w-full`} src={logoImage} />
+                <div className={`w-5/12 text-center ${styles.logoBox}`}>
+                    <div className={`${styles.logoBox} m-auto`}>
+                        <Logo />
                     </div>
                 </div>
 
-                <div className='w-5/12 text-right'>
-                    <Button className={`self-center px-10 py-3`}> Email me</Button>
+                <div className='w-full sm:w-5/12 text-right'>
+                    <Button className={`self-center px-10 py-3 capitalize`}>get in touch</Button>
                 </div>
             </nav>
         </>

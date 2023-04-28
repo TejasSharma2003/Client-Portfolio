@@ -1,0 +1,14 @@
+.logo
+{
+    width: 10rem;
+    height: 10rem;
+    display: inline-block;
+}
+
+@media(max-width:40em) {
+    .logo
+    {
+        width: 8rem;
+        height:8rem;
+    }
+}

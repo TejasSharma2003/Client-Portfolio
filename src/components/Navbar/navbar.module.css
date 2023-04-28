@@ -53,5 +53,17 @@
   position: relative;
 }
 
-.logo {
+.logo-box {
+}
+
+@media(max-width:27em) {
+  .logo-box
+  {
+    display: none;
+  }
+
+  .navbar{
+    height: 8rem;
+  }
+  
 }

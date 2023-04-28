@@ -9,7 +9,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; /* 1rem = 10px */
 }
 
 body {
@@ -17,5 +17,27 @@ body {
   background-color: #000;
   color: #fff;
   font-family: "Poppins", sans-serif;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+@media (max-width:62em)
+{
+  html
+  {
+    font-size: 56.25% /* 1rem = 9px */
+  }
+}
+
+/* small phones */
+@media(max-width:27em)
+{
+  html
+  {
+    font-size:50%; /* 1rem = 8px*/
+  }
 }

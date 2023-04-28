@@ -1,0 +1,46 @@
+.image {
+  margin-bottom: 3.5rem;
+}
+
+.grid {
+  column-count: 4;
+  --webkit-column-count: 4;
+  --moz-column-count: 4;
+  gap: 3.5rem;
+}
+
+.eye {
+  font-size: 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: transform(-50%, -50%);
+  transition: transform 0.3s;
+  transform: scale(0);
+  color: #fff;
+  z-index: 2;
+}
+
+@media (max-width: 62em) {
+  .grid {
+    column-count: 3;
+    --webkit-column-count: 3;
+    --moz-column-count: 3;
+  }
+}
+
+@media (max-width: 48em) {
+  .grid {
+    column-count: 2;
+    --webkit-column-count: 2;
+    --moz-column-count: 2;
+  }
+}
+
+@media (max-width: 27em) {
+  .grid {
+    column-count: 1;
+    --webkit-column-count: 1;
+    --moz-column-count: 1;
+  }
+}

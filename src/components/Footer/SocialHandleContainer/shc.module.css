@@ -1,0 +1,30 @@
+.icon-cover {
+  width: 45px;
+  height: 45px;
+  /* padding: ; */
+  border-radius: 50px;
+  border: 1px solid rgb(255 255 255 / 0.2);
+  transition: background-color 0.2s ease;
+}
+.social-handle-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.social-handle-container:not(:first-child)::before {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 1px;
+  background-color: #fff;
+  transform: rotate(10deg);
+  margin: 0 3rem;
+}
+
+@media (max-width: 27em) {
+  .social-handle-container:not(:first-child)::before {
+    margin: 0 2rem;
+  }
+}

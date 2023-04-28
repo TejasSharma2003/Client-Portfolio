@@ -1,4 +1,5 @@
 .hero {
+  /* margin-top: 10%; */
 }
 
 .role {
@@ -10,7 +11,7 @@
 .hero-h1 {
   font-size: 7rem;
   line-height: 1;
-  letter-spacing: 12px;
+  letter-spacing: 8px;
   font-weight: 800;
 }
 
@@ -30,10 +31,10 @@
 
 .hero-image {
   position: absolute;
-  top: -170px;
+  top: 0px;
   right: 0;
-  width: 50%;
-  height: 140%;
+  width: 100%;
+  height: 100%;
   z-index: -3;
 }
 
@@ -41,7 +42,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 51%;
+  width: 100%;
   height: 100%;
   z-index: -2;
 }
@@ -57,7 +58,41 @@
 .left-fade {
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(31, 36, 0, 0) 70%
+    rgba(0, 0, 0, 1) 15%,
+    rgba(31, 36, 0, 0) 75%
   );
+}
+
+.top-fade {
+  background: linear-gradient(
+    183deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(31, 36, 0, 0) 25%
+  );
+}
+
+@media (max-width: 40em) {
+  .bottom-fade {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(31, 36, 0, 0) 75%
+    );
+  }
+
+  .left-fade {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 1) 15%,
+      rgba(31, 36, 0, 0) 80%
+    );
+  }
+}
+
+@media(max-width:27em)
+{
+  .hero-h1
+  {
+    font-size:5.5rem;
+  }
 }

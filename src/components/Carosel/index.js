@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as styles from './carosel.module.css'
 
 import { useState } from 'react';
-import { m, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { wrap } from 'popmotion';
 
 import testimonial from '../About/Testimonials';
@@ -55,7 +55,7 @@ export const Carousel = () => {
     return (
         <div className={`${styles.testimonialContainer} flex justify-center items-center`}>
             <AnimatePresence initial={false} custom={direction}>
-                <m.div
+                <motion.div
                     key={page}
                     custom={direction}
                     className="text-center absolute"
@@ -82,7 +82,7 @@ export const Carousel = () => {
                 >
                     <Para className={`${styles.sayAuthor}`}>{testimonial[pageIndex].say}</Para>
                     <h4 className="mt-20 font-play-fair text-4xl tracking-widest">{testimonial[pageIndex].author}</h4>
-                </m.div>
+                </motion.div>
             </AnimatePresence>
             <div className={styles.next} onClick={() => paginate(1)}>
                 {'‣'}

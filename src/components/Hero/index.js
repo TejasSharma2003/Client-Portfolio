@@ -31,7 +31,7 @@ const Hero = () => {
                 <StaticImage
                     src="../../images/work.jpg"
                     alt="myword"
-                    className={styles.heroImage}
+                    className={`${styles.heroImage} absolute`}
                     layout="constrained"
                     placeholder="tracedSVG"
                     loading='eager'

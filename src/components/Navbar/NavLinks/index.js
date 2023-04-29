@@ -5,6 +5,8 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 import { motion, staggerChildren } from 'framer-motion'
 
+import image from '../../../images/navimg.jpg'
+
 const links = [
     {
         directTo: '/',
@@ -82,7 +84,7 @@ const NavLinks = () => {
             <div className={`${styles.bottomFade} ${styles.fade} `}></div>
             <div>
                 <StaticImage
-                    src="../../../images/navimg.jpg"
+                    src="/src/images/navimg.jpg"
                     alt="client"
                     className={styles.navImage}
                     layout='constrained'

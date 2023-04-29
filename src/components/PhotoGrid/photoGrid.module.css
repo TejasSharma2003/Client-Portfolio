@@ -23,11 +23,11 @@
   }
 }
 
-@media (max-width: 27em) {
+/* @media (max-width: 27em) {
   .grid {
     column-count: 1;
     --webkit-column-count: 1;
     --moz-column-count: 1;
     gap: 1.5rem;
   }
-}
+} */

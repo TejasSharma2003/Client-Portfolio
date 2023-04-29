@@ -82,16 +82,16 @@ const NavLinks = () => {
             </motion.ul>
             <div className={`${styles.leftFade} ${styles.fade}`}></div>
             <div className={`${styles.bottomFade} ${styles.fade} `}></div>
-            <div>
-                <StaticImage
-                    src="/src/images/navimg.jpg"
-                    alt="client"
-                    className={styles.navImage}
-                    layout='constrained'
-                    placeholder="tracedSVG"
-                    loading='eager'
-                />
-            </div>
+
+            <StaticImage
+                src="../../../images/navimg.jpg"
+                alt="client"
+                className={`${styles.navImage} absolute`}
+                layout='constrained'
+                placeholder="tracedSVG"
+                loading='eager'
+            />
+
         </motion.div>
 
     )

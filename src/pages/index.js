@@ -49,7 +49,7 @@ const IndexPage = () => {
         </Container>
       </header>
 
-      <Container>
+      <Container >
         <Services />
         <Portfolio />
       </Container>

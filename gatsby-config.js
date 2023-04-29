@@ -22,9 +22,9 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: process.env.spaceId,
+        spaceId: process.env.SPACE_ID,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: process.env.accessToken
+        accessToken: process.env.ACCESS_TOKEN
       },
     },
     "gatsby-plugin-postcss",

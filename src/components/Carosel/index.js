@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { wrap } from 'popmotion';
 
-import testimonial from '../About/Testimonials';
+import testimonial from './testimonials';
 
 import Para from '../../elements/Para'
 

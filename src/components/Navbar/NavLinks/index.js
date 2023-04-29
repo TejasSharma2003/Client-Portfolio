@@ -5,7 +5,6 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 import { motion, staggerChildren } from 'framer-motion'
 
-import image from '../../../images/navimg.jpg'
 
 const links = [
     {

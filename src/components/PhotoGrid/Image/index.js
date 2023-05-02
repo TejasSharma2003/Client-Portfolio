@@ -3,27 +3,22 @@ import * as styles from './image.module.css'
 
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-import { BsEye } from '@react-icons/all-files/bs/BsEye'
+import { GoEye } from '@react-icons/all-files/go/GoEye'
 
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 
 
-const cardContainerVariants = {
-    onscreen: {
-        transition: {
-            staggerChildren: .5
-        }
-    }
-}
 
 const cardVariants = {
     offscreen: {
         opacity: 0,
+        y: 100
     },
     onscreen: {
         opacity: 1,
+        y: 0,
         transition: {
-            ease: [0.87, 0, 0.13, 1],
+            ease: [0.34, 0.2, 0, 0.97],
             duration: 1.5
         }
     }
@@ -40,14 +35,14 @@ const Image = (props) => {
 
     return (
         <motion.div
-            className='cursor-pointer mb-10 w-full overflow-hidden relative'
+            className='cursor-pointer mb-10 w-full overflow-hidden relative rounded-lg'
             onClick={onClickHandler}
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
             variants={cardVariants}
             initial='offscreen'
             whileInView='onscreen'
-            viewport={{once:true}}
+            viewport={{ once: true }}
         >
             <div
                 className={`${styles.imageWrap} ${isHovering && styles.imageHover}`}
@@ -56,7 +51,7 @@ const Image = (props) => {
                     className={`w-full transition-transform`}
                     image={props.imageSrc}
                     alt="some-image" />
-                <BsEye className={styles.eyeIcon} />
+                <GoEye className={styles.eyeIcon} />
             </div>
         </motion.div>
     )

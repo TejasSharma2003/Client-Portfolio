@@ -4,11 +4,22 @@ import * as styles from './photoGrid.module.css'
 
 import { graphql, useStaticQuery } from 'gatsby'
 
-import {  getImage } from 'gatsby-plugin-image'
+import { motion } from 'framer-motion'
+
+import { getImage } from 'gatsby-plugin-image'
 import Image from './Image'
 
 import ImageCarosel from './ImageCarosel'
 import { AnimatePresence } from 'framer-motion'
+
+
+const cardContainerVariants = {
+  onscreen: {
+    transition: {
+      staggerChildren: 1
+    }
+  }
+}
 
 
 const PhotoGrid = () => {
@@ -16,7 +27,7 @@ const PhotoGrid = () => {
 
   const data = useStaticQuery(graphql`
   query{
-    allContentfulAsset {
+    allContentfulAsset(sort: { fields: id, order: ASC }) {
       edges {
         node {
           id
@@ -58,14 +69,17 @@ const PhotoGrid = () => {
 
       </AnimatePresence>
 
-      <div className={styles.grid}>
+      <motion.div
+        className={styles.grid}
+        variants={cardContainerVariants}
+      >
         {data.allContentfulAsset.edges.map((edge, idx) => {
           const imageSrc = getImage(edge.node.smallerImage);
           return (
             <Image key={idx} id={idx} getItemId={getItemId} imageSrc={imageSrc} />
           )
         })}
-      </div>
+      </motion.div>
     </>
   )
 }

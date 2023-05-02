@@ -4,18 +4,8 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  /* transition: all 0.3s;
-  opacity: 0; */
-  background-color: #000;
   z-index: 30;
-  /* visibility: hidden; */
-  /* transition: all 0.3s cubic-bezier(0.87, 0, 0.13, 1); */
-}
-
-.nav-links-container-active {
-  visibility: visible;
-  opacity: 1;
-  transition: all 0.5s cubic-bezier(0.87, 0, 0.13, 1);
+  background: rgba(0 0 0 / 0.9);
 }
 
 .links {
@@ -37,12 +27,12 @@
 }
 
 .link {
-  color: #cecece;
-  transition: color 0.2s;
+  color: #fff;
+  transition: color 0.25s ease-in-out;
 }
 
 .link:hover {
-  color: #fff;
+  color: #cecece;
 }
 
 .activeLink {

@@ -26,7 +26,7 @@ const SocialContainer = () => {
     ]
 
     return (
-        <div className={`${styles.socialLinks} relative z-40`}>
+        <div className={`${styles.socialLinks} relative z-20`}>
             {links.map((link, idx) => {
                 return <a key={idx} href={link.directTo} target="_blank" className={`block text-3xl cursor-pointer`}><link.icon className='hover:fill-secondary  transition-colors' /></a>
             })}

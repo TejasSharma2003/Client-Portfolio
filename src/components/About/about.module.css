@@ -1,5 +1,4 @@
 .about-section {
-  /* margin-top: 25rem; */
 }
 
 .my-image {
@@ -29,10 +28,5 @@
 
 @media (min-width: 48em) {
   .about-section {
-    background-image: url("../../images/me-modified.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 15rem 0;
   }
 }

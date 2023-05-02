@@ -8,21 +8,22 @@ import { motion, staggerChildren } from 'framer-motion'
 
 const links = [
     {
-        directTo: '/',
-        text: 'Homepage'
+        directTo: '#about',
+        text: 'About'
     },
     {
-        directTo: '/portfolio',
+        directTo: '#footer',
+        text: 'Contact'
+    },
+    {
+        directTo: '#portfolio',
         text: 'Portfolio'
     },
     {
-        directTo: '/services',
+        directTo: '#services',
         text: 'Services'
-    },
-    {
-        directTo: '/reviews',
-        text: 'Testimonial'
     }
+
 ]
 
 const linksContainerVariants = {
@@ -33,20 +34,20 @@ const linksContainerVariants = {
 const linkVariant = {
     show: {
         opacity: 1, y: 0, transition: {
-            ease: 'easeInOut',
-            duration: .5
+            ease: [0.34, 0.2, 0, 0.97],
+            duration: .8
         }
     },
     hidden: { opacity: 0, y: 20 },
     exit: {
         opacity: 0, y: 20, transition: {
-            ease: 'easeInOut',
-            duration: .2
+            ease: [0.34, 0.2, 0, 0.97],
+            duration: .3
         }
     }
 }
 
-const NavLinks = () => {
+const NavLinks = (props) => {
 
     return (
         <motion.div
@@ -64,22 +65,17 @@ const NavLinks = () => {
                 {links.map((link, idx) => {
                     return (
                         <motion.li
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 1 }}
-                            transition={{
-                                ease: 'easeInOut',
-                                duration: 0.2
-                            }}
+                            onClick={() => props.resetMenuActive()}
                             variants={linkVariant}
-                            key={idx} className={`block tracking-wider`}>
-                            <Link to={link.directTo} activeClassName={styles.activeLink} className={`${styles.link}`}>
+                            key={idx} className={`block tracking-wider font-play-fair`}>
+                            <a href={link.directTo} className={`${styles.link}`}>
                                 {link.text}
-                            </Link>
+                            </a>
                         </motion.li>
                     )
                 })}
             </motion.ul>
-            <div className={`${styles.leftFade} ${styles.fade}`}></div>
+            {/* <div className={`${styles.leftFade} ${styles.fade}`}></div>
             <div className={`${styles.bottomFade} ${styles.fade} `}></div>
 
             <StaticImage
@@ -89,7 +85,7 @@ const NavLinks = () => {
                 layout='constrained'
                 placeholder="tracedSVG"
                 loading='eager'
-            />
+            /> */}
 
         </motion.div>
 

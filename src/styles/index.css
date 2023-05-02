@@ -19,25 +19,20 @@ body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
   scrollbar-width: none;
+  -webkit-tap-highlight-color: transparent; /* For older versions of iOS */
+  /* user-select: none; */
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;
 }
 
-@media (max-width:62em)
-{
-  html
-  {
-    font-size: 56.25% /* 1rem = 9px */
+@media (max-width: 62em) {
+  html {
+    font-size: 56.25%; /* 1rem = 9px */
   }
 }
 
 /* small phones */
-@media(max-width:27em)
-{
-  html
-  {
-    font-size:50%; /* 1rem = 8px*/
-  }
+@media (max-width: 27em) {
 }

@@ -2,8 +2,10 @@ import React from 'react'
 import * as styles from './section.module.css'
 
 const Section = (props) => {
+
+    const id = props.id || null;
     return (
-        <section className={`${props.className} ${styles.section}`}>{props.children}</section>
+        <section id={id} className={`${props.className} ${styles.section}`}>{props.children}</section>
     )
 }
 

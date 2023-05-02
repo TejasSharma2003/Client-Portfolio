@@ -7,7 +7,7 @@
 .image {
   height: 100%;
   aspect-ratio: 2/3;
-  transition: all 0.5s cubic-bezier(0.29, 0.7, 0.36, 0.78);
+  transition: transform 0.5s cubic-bezier(0.34, 0.2, 0, 0.97);
 }
 
 .bottom-fade {
@@ -36,21 +36,23 @@
 
 .image-caption {
   position: absolute;
-  top: 80%;
+  bottom: 0;
   left: 50%;
-  transform: translate(-50%, 100%);
-  background: linear-gradient(97.13deg, #e9e9e9 0%, #252525 180%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  z-index: 2;
+  transform: translate(-50%, 50%);
+  color: #fff;
+  z-index: 50;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.image-wrapper:hover .image-caption {
+  transform: translate(-50%, 0%);
+  opacity: 1;
 }
 
 .animate-box {
-  overflow: hidden;
   cursor: pointer;
   max-width: 260px;
-  min-height: 250px;
 }
 
 .animate-box:hover .image {
@@ -62,7 +64,8 @@
 .animate-box {
   transform: translateY(200px);
   opacity: 0;
-  transition: all 1.5s cubic-bezier(0.87, 0, 0.13, 1);
+  transition: transform 1.5s cubic-bezier(0.34, 0.2, 0, 0.97),
+    opacity 1.5s cubic-bezier(0.34, 0.2, 0, 0.97);
 }
 
 .full-up,
@@ -91,9 +94,7 @@
     gap: 2rem;
   }
 
-  
-  .animate-box:not(:nth-last-child(2))
-  {
+  .animate-box:not(:nth-last-child(2)) {
     margin-bottom: 5rem;
   }
 }

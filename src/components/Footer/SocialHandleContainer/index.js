@@ -13,7 +13,7 @@ const SocialHandleContainer = ({ prop }) => {
                 <img className='relative w-10 h-10' src={prop.flatform} alt={prop.name} />
             </span>
 
-            <SecondaryHeading className='text-3xl sm:text-4xl capitalize ml-5 font-play-fair tracking-wider'>{prop.name}</SecondaryHeading>
+            <SecondaryHeading className='text-2xl  sm:text-4xl capitalize ml-5 font-play-fair tracking-wider'>{prop.name}</SecondaryHeading>
         </div>
     )
 }

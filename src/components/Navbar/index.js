@@ -7,18 +7,36 @@ import NavLinks from './NavLinks';
 import { AnimatePresence } from 'framer-motion';
 
 import Logo from '../Logo';
+import ScrollDown from '../../util/ScrollDown';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 const Navbar = () => {
     const [menuActive, setMenuActive] = useState(false);
+
+    if (menuActive) {
+        disableBodyScroll(document.body);
+    }
+    else {
+        enableBodyScroll(document.body);
+    }
 
     const onClickMenuHandler = () => {
         setMenuActive(pre => !pre);
     }
 
+    const onClickHandlerScroll = () => {
+        //close menu before reaching target
+        setMenuActive(false);
+        ScrollDown('footer')
+    }
+
+    const resetMenuActive = () => {
+        setMenuActive(false);
+    }
     return (
         <>
             <AnimatePresence>
-                {menuActive && <NavLinks menuActive={menuActive} />}
+                {menuActive && <NavLinks menuActive={menuActive} resetMenuActive={resetMenuActive} />}
             </AnimatePresence>
             <nav className={`${styles.navbar} relative z-40 flex  items-center  pt-5  `}>
                 <div className='w-full sm:w-5/12 '>
@@ -37,14 +55,14 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <div className={`w-5/12 text-center ${styles.logoBox}`}>
+                <a href="/" className={`w-5/12 text-center ${styles.logoBox}`}>
                     <div className={`${styles.logoBox} m-auto`}>
                         <Logo />
                     </div>
-                </div>
+                </a>
 
-                <div className='w-full sm:w-5/12 text-right'>
-                    <Button className={`self-center px-10 py-3 capitalize`}>get in touch</Button>
+                <div onClick={onClickHandlerScroll} className='w-full sm:w-5/12 text-right'>
+                    <Button className={`self-center px-10 py-3 capitalize whitespace-nowrap`}>get in touch</Button>
                 </div>
             </nav>
         </>

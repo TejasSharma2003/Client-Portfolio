@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useEffect } from "react"
 import '../styles/index.css'
 
 import { AnimatePresence } from "framer-motion"
@@ -10,9 +10,7 @@ import Portfolio from "../components/Portfolio"
 import Services from '../components/Services'
 import Container from "../ui/Container"
 import Overlay from '../ui/Overlay'
-import { Carousel } from "../components/Carosel"
 import About from "../components/About"
-import Testimonial from "../components/Testimonial"
 import Footer from "../components/Footer"
 
 
@@ -21,23 +19,19 @@ import Footer from "../components/Footer"
 const IndexPage = () => {
   const [isLoading, setIsLoading] = React.useState(true);
 
-  React.useEffect(() => {
-
-    window.addEventListener('load', () => {
-
-      setIsLoading(false);
-    });
+  useEffect(() => {
 
     const timer = setTimeout(() => {
       setIsLoading(false)
     }, 3000);
 
     return () => clearTimeout(timer)
+
   }, []);
 
 
   return (
-    <>
+    <main>
       <AnimatePresence>
         {isLoading && <Overlay isLoading={isLoading} id="banner" />}
       </AnimatePresence>
@@ -54,15 +48,11 @@ const IndexPage = () => {
         <Portfolio />
       </Container>
       <About />
-
-      <Testimonial />
       <Footer />
-
-
-    </>
+    </main>
   )
 }
-export const Head = () => <title>Naina Sharma | Artist</title>
+export const Head = () => <title>Naina Sharma | Makup / Nail Artist</title>
 
 export default IndexPage
 

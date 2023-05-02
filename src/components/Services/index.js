@@ -10,8 +10,6 @@ import { m, useInView } from 'framer-motion'
 import { graphql, useStaticQuery } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-const caption = ['Haldi Makeup', 'Nails embellish', 'Hastfast makeup', 'Bridal makeup']
-
 const Services = () => {
 
   //For scroll in view animation
@@ -27,6 +25,7 @@ const Services = () => {
         )   
       {
         nodes {
+          name
           childImageSharp {
             gatsbyImageData
           }
@@ -35,22 +34,27 @@ const Services = () => {
     }
   `)
 
-  console.log(data);
+
   return (
-    <Section>
+    <Section id='services'>
       <SectionHeading upperText="Services" bottomText="what i pursue is art" />
       <div className={`${styles.imageContainer}`}>
         {data.allFile.nodes.map((node, idx) => {
           return (
             <m.div
-            key={idx}
+              key={idx}
               ref={ref}
-              className={`${styles.animateBox} relative inline-block
+              className={`${styles.animateBox} ${styles.imageWrapper}  relative inline-block
               ${isInView && ((idx + 1) % 2 == 0 ? styles.fullUp : styles.halfUp)}
               `}>
-              <GatsbyImage className={styles.image} image={node.childImageSharp.gatsbyImageData} alt="Work image" />
-              <SecondaryHeading className={`${styles.imageCaption} tracking-wide text-4xl max-capitalize whitespace-nowrap`}>{caption[idx]}</SecondaryHeading>
-              <div className={styles.bottomFade}></div>
+
+              <div className=' overflow-hidden rounded-t-xl h-full'>
+                <GatsbyImage className={styles.image} image={node.childImageSharp.gatsbyImageData} alt="Work image" />
+              </div>
+
+              <div className={`${styles.bottomFade}`}></div>
+
+              <SecondaryHeading className={`${styles.imageCaption} tracking-wider text-3xl max-capitalize whitespace-nowrap font-normal`}>{node.name}</SecondaryHeading>
             </m.div>
           )
         }

@@ -79,7 +79,7 @@ const ImageCarosel = ({ contentfulData, currentImageIdx, resetCurrentImageIdx })
 
             <motion.div
                 key="carosel"
-                className={`${styles.exampleContainer}`}
+                className={`${styles.exampleContainer} `}
                 variants={animateVariants}
                 initial='hidden'
                 animate='show'
@@ -98,8 +98,7 @@ const ImageCarosel = ({ contentfulData, currentImageIdx, resetCurrentImageIdx })
                         variants={variants}
                         initial="enter"
                         animate="center"
-                        style={{ display: `${imageLoaded ? 'block' : 'none'}` }}
-                        className={styles.img}
+                        className={`${styles.img} ${imageLoaded && styles.showImage}`}
                         exit="exit"
                         transition={{
                             opacity: { duration: .3 }
@@ -119,12 +118,12 @@ const ImageCarosel = ({ contentfulData, currentImageIdx, resetCurrentImageIdx })
                     />
                 </AnimatePresence>
 
-                <div className={styles.next} onClick={() => { paginate(1); setImageLoaded(false) }}>
-                    <IoArrowBack className="text-2xl" />
+                <div className={`${styles.next} bottom-20 sm:bottom-auto`} onClick={() => { paginate(1); setImageLoaded(false) }}>
+                    <IoArrowBack className=" text-3xl" />
                 </div>
 
-                <div className={styles.prev} onClick={() => { paginate(-1); setImageLoaded(false) }}>
-                    <IoArrowBack className="text-2xl" />
+                <div className={`${styles.prev} bottom-20 sm:bottom-auto`} onClick={() => { paginate(-1); setImageLoaded(false) }}>
+                    <IoArrowBack className="text-3xl" />
 
                 </div>
             </motion.div>

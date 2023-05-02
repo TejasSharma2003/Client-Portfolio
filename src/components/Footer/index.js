@@ -24,7 +24,7 @@ const handles = [
 const Footer = () => {
 
     return (
-        <footer className={`flex items-center justify-center text-center ${styles.footer}`}>
+        <footer id='footer' className={`flex items-center justify-center text-center ${styles.footer}`}>
             <div className=''>
                 <Logo />
                 <span className='capitalized block text-2xl mt-5 mb-12 tracking-widest'>Make-up & Nail Artist</span>

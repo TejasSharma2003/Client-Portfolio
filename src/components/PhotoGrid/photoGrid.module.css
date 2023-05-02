@@ -3,6 +3,12 @@
   --webkit-column-count: 4;
   --moz-column-count: 4;
   gap: 2.5rem;
+  position: relative;
+}
+
+.grid > *
+{
+  break-inside: avoid;
 }
 
 @media (max-width: 53em) {

@@ -10,7 +10,7 @@ import SectionHeading from '../SectingHeading'
 
 const Portfolio = () => {
     return (
-        <Section className='relative bg-black z-2'>
+        <Section id='portfolio' className='relative bg-black z-2'>
             <SectionHeading upperText="Portfolio" bottomText="My Dextirity with brushes" />
             <PhotoGrid />
         </Section>

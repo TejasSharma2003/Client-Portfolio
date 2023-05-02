@@ -1,9 +1,7 @@
 import React from 'react'
 import * as styles from './navLinks.module.css'
-import { Link } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
 
-import { motion, staggerChildren } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 
 const links = [
@@ -75,18 +73,6 @@ const NavLinks = (props) => {
                     )
                 })}
             </motion.ul>
-            {/* <div className={`${styles.leftFade} ${styles.fade}`}></div>
-            <div className={`${styles.bottomFade} ${styles.fade} `}></div>
-
-            <StaticImage
-                src="../../../images/navimg.jpg"
-                alt="client"
-                className={`${styles.navImage} absolute`}
-                layout='constrained'
-                placeholder="tracedSVG"
-                loading='eager'
-            /> */}
-
         </motion.div>
 
     )

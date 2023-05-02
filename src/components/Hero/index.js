@@ -18,7 +18,7 @@ const Hero = () => {
 
     return (
         <div className={`${styles.hero} mt-40 `}>
-            <div className={`${styles.heroTextBox} `}>
+            <div>
                 <div><span className={`block uppercase text-primary ${styles.role}`}>Makeup / Nails Artist</span></div>
                 <h1 className={`${styles.heroH1} font-play-fair uppercase `}>naina <br />sharma</h1>
                 <Para className={`${styles.heroPara} mt-6 max-w-3xl text-white/[.55]`}>Hello, I’m Naina Sharma I would like to welcome you to my Personal Porfolio Check out my work by clicking below button</Para>
@@ -35,17 +35,17 @@ const Hero = () => {
             <div className={`${styles.topFade} ${styles.fade}`}></div>
             <div className={`${styles.rightFade} ${styles.fade}`}></div>
 
-            <div>
-                <StaticImage
-                    src="../../images/work.jpg"
-                    alt="myword"
-                    className={`${styles.heroImage} absolute`}
-                    layout="constrained"
-                    placeholder="tracedSVG"
-                    loading='eager'
 
-                />
-            </div>
+            <StaticImage
+                src="../../images/work.jpg"
+                alt="myword"
+                className={`${styles.heroImage}`}
+                layout="constrained"
+                placeholder="tracedSVG"
+                loading='eager'
+
+            />
+
             <span className='absolute  z-30 bottom-5 right-2 text-xl text-white/50 tracking-wider uppercase t'>A glimse of my Work.</span>
         </div>
     )

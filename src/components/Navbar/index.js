@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import * as  styles from './navbar.module.css';
 
 import Button from '../../elements/Button'
@@ -13,16 +13,20 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 const Navbar = () => {
     const [menuActive, setMenuActive] = useState(false);
 
-    if (menuActive) {
-        disableBodyScroll(document.body);
-    }
-    else {
-        enableBodyScroll(document.body);
-    }
-
     const onClickMenuHandler = () => {
         setMenuActive(pre => !pre);
     }
+
+    useEffect(() => {
+
+        if (menuActive) {
+            disableBodyScroll(document.body);
+        }
+        else {
+            enableBodyScroll(document.body);
+        }
+
+    }, [menuActive])
 
     const onClickHandlerScroll = () => {
         //close menu before reaching target

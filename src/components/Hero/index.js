@@ -38,6 +38,7 @@ const Hero = () => {
 
             <StaticImage
                 src="../../images/work.jpg"
+                style={{ position: 'absolute' }}
                 alt="myword"
                 className={`${styles.heroImage}`}
                 layout="constrained"

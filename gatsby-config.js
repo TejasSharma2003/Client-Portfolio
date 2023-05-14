@@ -11,6 +11,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        "icon": "src/images/logo-new-min.png"
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         // The unique name for each instance

@@ -27,13 +27,7 @@ const Navbar = () => {
         }
 
     }, [menuActive])
-
-    const onClickHandlerScroll = () => {
-        //close menu before reaching target
-        setMenuActive(false);
-        ScrollDown('footer')
-    }
-
+    
     const resetMenuActive = () => {
         setMenuActive(false);
     }
@@ -65,10 +59,12 @@ const Navbar = () => {
                     </div>
                 </a>
 
-                <div onClick={onClickHandlerScroll} className='w-full sm:w-5/12 text-right'>
+                <div className='w-full sm:w-5/12 text-right'>
+                    <a href='https://wa.me/919760921888'>
                     <Button className={`self-center px-10 py-3 capitalize whitespace-nowrap`}>get in touch</Button>
-                </div>
-            </nav>
+                </a>
+            </div>
+        </nav >
         </>
 
     )

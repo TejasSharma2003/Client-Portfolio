@@ -1,5 +1,4 @@
 import React from 'react'
-import * as styles from './testimonial.module.css'
 import Section from '../../ui/Section'
 import SectionHeading from '../SectingHeading'
 import { Carousel } from '../Carosel'

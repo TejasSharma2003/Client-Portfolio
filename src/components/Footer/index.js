@@ -12,7 +12,8 @@ const handles = [
     {
         flatform: Instagram,
         name: 'instagram',
-        hover: '#E1306C'
+        hover: '#E1306C',
+        directTo: 'https://instagram.com/glorifiedbynaina_sharma?igshid=NTc4MTIwNjQ2YQ=='
     },
     {
         flatform: faceBook,
@@ -33,7 +34,7 @@ const Footer = () => {
                         return <SocialHandleContainer prop={handle} key={idx} />
                     })}
                 </div>
-                <span className='text-lg mt-12 inline-block text-white/[.55]'>© 2023 Naina Makeover - Code by Tejas</span>
+                <span className='text-lg mt-12 inline-block text-white/[.55]'>© 2023 Naina Makeover - Code by <a href='https://itsmetejas.onrender.com/'>Tejas</a></span>
             </div>
         </footer>
     )

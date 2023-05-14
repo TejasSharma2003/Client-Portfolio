@@ -21,10 +21,11 @@ const Hero = () => {
             <div>
                 <div><span className={`block uppercase text-primary ${styles.role}`}>Makeup / Nails Artist</span></div>
                 <h1 className={`${styles.heroH1} font-play-fair uppercase `}>naina <br />sharma</h1>
-                <Para className={`${styles.heroPara} mt-6 max-w-3xl text-white/[.55]`}>Hello, I’m Naina Sharma I would like to welcome you to my Personal Porfolio Check out my work by clicking below button</Para>
+                <Para className={`${styles.heroPara} mt-6 max-w-3xl text-white/[.55]`}>
+                    Welcome to the world of beauty! Naina is a professional makeup artist with a passion for enhancing natural beauty and creating unique looks that make my clients feel confident and beautiful.</Para>
             </div>
             <Button onClick={onClickHandlerScroll} className={`${styles.heroButton} py-4 px-8 mt-10 `}>
-                <span className='flex items-center'>Explore My Work<span className={`ml-3 `}>
+                <span className='flex items-center'>Find Out More<span className={`ml-3 `}>
                     <BsChevronDown className={styles.heroArrowUpIcon} />
                 </span></span>
             </Button>
@@ -47,7 +48,7 @@ const Hero = () => {
 
             />
 
-            <span className='absolute  z-30 bottom-5 right-2 text-xl text-white/50 tracking-wider uppercase t'>A glimse of my Work.</span>
+            <span className='absolute  z-30 bottom-5 right-2 text-xl text-white/50 tracking-wider uppercase t'>A glimse of Work.</span>
         </div>
     )
 }

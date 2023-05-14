@@ -11,7 +11,7 @@ const SocialContainer = () => {
         {
             platform: 'Instagram',
             icon: RiInstagramFill,
-            directTo: '#'
+            directTo: 'https://instagram.com/glorifiedbynaina_sharma?igshid=NTc4MTIwNjQ2YQ=='
         },
         {
             platform: 'facebook',
@@ -21,7 +21,7 @@ const SocialContainer = () => {
         {
             platform: 'whatsapp',
             icon: RiWhatsappFill,
-            directTo: '#'
+            directTo: 'https://wa.me/919760921888'
         }
     ]
 
